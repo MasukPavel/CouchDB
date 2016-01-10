@@ -14,24 +14,26 @@
             android:layout_height="wrap_content"
             android:text="Submit"
             android:id="@+id/button3"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:onClick="post" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Cancel"
             android:id="@+id/button4"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:onClick="cancel" />
     </TableRow>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/scrollView"
-        android:layout_centerHorizontal="true"
+        android:fillViewport="false"
         android:layout_below="@+id/tableRow2"
-        android:layout_above="@+id/tableRow"
-        android:fillViewport="false">
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/tableRow">
 
         <LinearLayout
             android:orientation="vertical"
@@ -39,6 +41,15 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/tableRow2"
+            android:layout_above="@+id/tableRow"
+            android:id="@+id/lmain">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/l2"
             android:layout_above="@+id/tableRow"
             android:id="@+id/ll">
 
@@ -55,6 +66,37 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:id="@+id/textView5" />
             </TableRow>
+        </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/l2"
+                android:gravity="center_horizontal">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:id="@+id/textView7" />
+                </TableRow>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add image"
+                android:id="@+id/button5"
+                android:onClick="SelectImage" />
+
         </LinearLayout>
 
     </ScrollView>

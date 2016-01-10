@@ -29,5 +29,6 @@
         android:text="Create new"
         android:id="@+id/button2"
         android:layout_centerVertical="true"
-        android:layout_toEndOf="@+id/button" />
+        android:layout_toEndOf="@+id/button"
+        android:onClick="create" />
 </RelativeLayout>
